@@ -25,6 +25,13 @@ public class IocTest {
     @Test
     public void testImportColor(){
         printBeans(applicationContext);
+
+        // 工厂Bean获取的是getObject创建的对象
+        Object bean2 = applicationContext.getBean("colorFactoryBean");
+        System.out.println("bean的类型：" + bean2.getClass());
+
+        Object bean3 = applicationContext.getBean("&colorFactoryBean");
+        System.out.println("bean3的类型：" + bean3.getClass());
     }
 
     /**

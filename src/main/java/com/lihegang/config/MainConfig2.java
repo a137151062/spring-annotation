@@ -1,6 +1,7 @@
 package com.lihegang.config;
 
 import com.lihegang.bean.Color;
+import com.lihegang.bean.ColorFactoryBean;
 import com.lihegang.bean.Person;
 import com.lihegang.condition.LinuxCondition;
 import com.lihegang.condition.MyImportBeanDefinitionRegistrar;
@@ -49,5 +50,10 @@ public class MainConfig2 {
     @Bean("linux")
     public Person person02(){
         return new Person("linux","20");
+    }
+
+    @Bean
+    public ColorFactoryBean colorFactoryBean(){
+        return new ColorFactoryBean();
     }
 }
