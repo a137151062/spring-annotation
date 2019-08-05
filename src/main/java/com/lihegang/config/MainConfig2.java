@@ -1,17 +1,18 @@
 package com.lihegang.config;
 
+import com.lihegang.bean.Color;
 import com.lihegang.bean.Person;
 import com.lihegang.condition.LinuxCondition;
+import com.lihegang.condition.MyImportBeanDefinitionRegistrar;
+import com.lihegang.condition.MyImportSelector;
 import com.lihegang.condition.WindowsCondition;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.*;
 
 /**
  * Created by dong-er on 2019-08-04.
  */
 @Configuration
+@Import({Color.class,MyImportSelector.class, MyImportBeanDefinitionRegistrar.class}) // id默认是组件的全类名
 public class MainConfig2 {
 
     /**

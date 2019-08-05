@@ -13,6 +13,19 @@ import java.util.Map;
  * Created by dong-er on 2019-08-04.
  */
 public class IocTest {
+    AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig2.class);
+
+    private void printBeans(AnnotationConfigApplicationContext applicationContext){
+        String[] definationNames = applicationContext.getBeanDefinitionNames();
+        for (String name : definationNames){
+            System.out.println("===" + name);
+        }
+    }
+
+    @Test
+    public void testImportColor(){
+        printBeans(applicationContext);
+    }
 
     /**
      * 判断condition
