@@ -30,7 +30,7 @@ public class MainConfig2 {
  //   @Scope("prototype")
     public Person person(){
         System.out.println("给容器中添加Person...");
-        return new Person("28","zhangleilei");
+        return new Person("28","zhangleilei","leilei");
     }
 
     /**
@@ -43,13 +43,13 @@ public class MainConfig2 {
     @Conditional(WindowsCondition.class)
     @Bean("mayun")
     public Person person01(){
-        return new Person("ma yun","55");
+        return new Person("ma yun","55","mayun");
     }
 
     @Conditional(LinuxCondition.class)
     @Bean("linux")
     public Person person02(){
-        return new Person("linux","20");
+        return new Person("linux","20","linux");
     }
 
     @Bean

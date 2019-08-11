@@ -28,6 +28,6 @@ public class MainConfig {
 
     @Bean(name="person")
     public Person person01(){
-        return new Person("29","lihegang");
+        return new Person("29","lihegang","大神");
     }
 }
